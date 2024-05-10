@@ -1,4 +1,4 @@
-#waifu-toggle {
+/* #waifu-toggle {
 	background-color: #fa0;
 	border-radius: 5px;
 	bottom: 66px;
@@ -12,7 +12,7 @@
 	transition: margin-left 1s;
 	width: 60px;
 	writing-mode: vertical-rl;
-} 
+}
 
 #waifu-toggle.waifu-toggle-active {
 	margin-left: -50px;
@@ -31,11 +31,50 @@
 	transform: translateY(3px);
 	transition: transform .3s ease-in-out, bottom 3s ease-in-out;
 	z-index: 1;
-} 
+}
+
+#waifu:hover {
+	transform: translateY(0);
+} */
+
+
+#waifu-toggle {
+	background-color: #fa0;
+	border-radius: 5px;
+	bottom: 20px; /* 调整到合适的底部位置 */
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px;
+	right: 20px; /* 将 left 属性改为 right，调整到合适的右边位置 */
+	padding: 5px 2px 5px 5px;
+	position: fixed;
+	transition: right 1s, bottom 1s; /* 添加 right 过渡效果 */
+	width: 60px;
+	writing-mode: vertical-rl;
+}
+
+#waifu-toggle.waifu-toggle-active {
+	right: 50px; /* 调整到激活状态的右边位置 */
+}
+
+#waifu-toggle.waifu-toggle-active:hover {
+	right: 70px; /* 鼠标悬停时的右边位置 */
+}
+
+#waifu {
+	bottom: -1000px;
+	line-height: 0;
+	position: fixed;
+	right: 20px; /* 调整到合适的右边位置 */
+	transform: translateY(3px);
+	transition: transform .3s ease-in-out, bottom 3s ease-in-out;
+	z-index: 1;
+}
 
 #waifu:hover {
 	transform: translateY(0);
 }
+
 
 #waifu-tips {
 	animation: shake 50s ease-in-out 5s infinite;
